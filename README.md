@@ -65,7 +65,7 @@ mon-projet-express/
 
 ### 1. Cloner le projet
 
-git clone [https://github.com/votre-utilisateur/mon-projet-express.git](https://github.com/salmaly-ui/Tp3NodeJs.git)
+git clone [https://github.com/salmaly-ui/Tp3NodeJs.git]
 
 
 
