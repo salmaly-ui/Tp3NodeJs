@@ -201,6 +201,4 @@ nodemon
 
 ---
 
-## 👨‍💻 Auteur
 
-Projet full-stack Node.js + Express + PostgreSQL
