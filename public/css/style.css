@@ -1,0 +1,202 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f7fc;
+  color: #1e2a3a;
+  line-height: 1.5;
+}
+
+/* En-tête et pied de page avec dégradé */
+header, footer {
+  background: linear-gradient(135deg, #1e3c72, #2b4c7c);
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header h1, footer p {
+  margin: 0;
+  font-weight: 500;
+}
+
+footer {
+  font-size: 0.85rem;
+  background: linear-gradient(135deg, #2b4c7c, #1e3c72);
+}
+
+/* Contenu principal */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Cartes pour les formulaires et la liste */
+.form-add, .user-list {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.form-add:hover, .user-list:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* Titres internes (si présents) */
+.form-add h2, .user-list h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #1e3c72;
+  border-left: 4px solid #2b4c7c;
+  padding-left: 0.75rem;
+}
+
+/* Champs de formulaire */
+.form-add input, .form-add select, .form-add textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0 1rem 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: #fefefe;
+}
+
+.form-add input:focus, .form-add select:focus, .form-add textarea:focus {
+  outline: none;
+  border-color: #2b4c7c;
+  box-shadow: 0 0 0 3px rgba(43, 76, 124, 0.2);
+}
+
+/* Bouton d’ajout */
+.form-add button {
+  background: #2b4c7c;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.05s;
+}
+
+.form-add button:hover {
+  background: #1e3c72;
+  transform: scale(1.02);
+}
+
+.form-add button:active {
+  transform: scale(0.98);
+}
+
+/* Liste utilisateurs : grille responsive */
+.user-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.user-list li {
+  background: #f9fafb;
+  border-radius: 20px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s;
+}
+
+.user-list li:hover {
+  background: white;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* Texte utilisateur */
+.user-list span {
+  font-weight: 500;
+  word-break: break-word;
+  flex: 1;
+  margin-right: 1rem;
+}
+
+/* Formulaire inline (pour suppression / édition) */
+.form-inline {
+  display: inline-flex;
+  margin: 0 0.25rem;
+}
+
+.form-inline button {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.4rem 0.7rem;
+  border-radius: 30px;
+  transition: background 0.2s;
+}
+
+.form-inline button[type="submit"]:first-of-type {
+  color: #e67e22;
+}
+.form-inline button[type="submit"]:first-of-type:hover {
+  background: #fef3e8;
+}
+
+.form-inline button[type="submit"]:last-of-type {
+  color: #c0392b;
+}
+.form-inline button[type="submit"]:last-of-type:hover {
+  background: #fee9e7;
+}
+
+/* Message d’erreur */
+.error {
+  color: #c0392b;
+  background: #fdecea;
+  padding: 0.75rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 1rem 0;
+  border-left: 5px solid #e74c3c;
+  display: inline-block;
+}
+
+/* Responsive : petits écrans */
+@media (max-width: 640px) {
+  main {
+    padding: 0 1rem;
+  }
+
+  .user-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .form-inline {
+    margin: 0.25rem 0;
+  }
+
+  .user-list span {
+    margin-right: 0;
+  }
+}
