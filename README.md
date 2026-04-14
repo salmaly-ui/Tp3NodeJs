@@ -30,7 +30,7 @@ https://github.com/user-attachments/assets/ea4b1d8c-be85-4777-ac5e-20fe75f25dd1
 ---
 
 ## 📁 Structure du projet
-
+'''
 mon-projet-express/
 ├── config/
 │   └── db.js
@@ -50,7 +50,7 @@ mon-projet-express/
 ├── .env
 ├── app.js
 └── package.json
-
+''
 ---
 
 ## ⚙️ Prérequis
